@@ -77,7 +77,7 @@ def draw(win):
     
 
 
-def shapes(numberChoosen,userInput,win,totalScore, squareNum):
+def shapes(numberChoosen,userInput,win, squareNum):
 
     num1 = 1
     num2 = 2
@@ -95,12 +95,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+            
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+     
 
         if num2 == squareNum:
             if second == userInput:
@@ -108,12 +109,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+               
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
 
         if num3 == squareNum:
             if third == userInput:
@@ -121,12 +123,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
 
         if num4 == squareNum:
             if fourth == userInput:
@@ -134,12 +137,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
 
     if numberChoosen == 2:
         first = "square"
@@ -152,12 +156,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+              
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+        
 
         if num2 == squareNum:
             if second == userInput:
@@ -165,12 +170,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
 
         if num3 == squareNum:
             if third == userInput:
@@ -178,12 +184,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+               
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+        
 
         if num4 == squareNum:
             if fourth == userInput:
@@ -191,12 +198,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
 
     if numberChoosen == 3:
         first = "triangle"
@@ -209,12 +217,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+               
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+      
 
         if num2 == squareNum:
             if second == userInput:
@@ -222,12 +231,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+               
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+    
 
         if num3 == squareNum:
             if third == userInput:
@@ -235,24 +245,28 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
+               
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
+
         if num4 == squareNum:
             if fourth == userInput:
                 answer = Text(Point(192.0,190.0),"You are Correct!")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+       
 
     if numberChoosen == 4:
         first = "circle"
@@ -265,12 +279,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+              
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+        
 
         if num2 == squareNum:
             if second == userInput:
@@ -278,12 +293,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+              
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+            
 
         if num3 == squareNum:
             if third == userInput:
@@ -291,12 +307,13 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+                
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+            
 
         if num4 == squareNum:
             if fourth == userInput:
@@ -304,18 +321,19 @@ def shapes(numberChoosen,userInput,win,totalScore, squareNum):
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
-                totalScore = totalScore + 1
+              
             else:
                 answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
                 answer.draw(win)
                 win.getMouse()
                 answer.undraw()
+            
+        
 
 
 def main():
 
     win = GraphWin("Remember The Shape", 420,420)
-    totalScore = 0
 
     intro = Text(Point(192.0,190.0),"Welcome to Remember the Shape")
     intro.draw(win)
@@ -337,7 +355,7 @@ def main():
     win.getMouse()
     intro3.undraw()
 
-    intro4 = Text(Point(192.0,190.0),"Anwsers can be: square, circle, triangle, star")
+    intro4 = Text(Point(192.0,190.0),"Answers can be: square, circle, triangle, star")
     intro4.draw(win)
     win.getMouse()
     intro4.undraw()
@@ -395,7 +413,7 @@ def main():
         userInput.undraw()
 
    
-        shapes(numberChoosen,answer,win,totalScore, squareNum)
+        shapes(numberChoosen,answer,win, squareNum)
         question = Text(Point(192.0,190.0),"Do you want to keep playing? Y for Yes, N for No")
         question.draw(win)
         win.getMouse()
@@ -409,9 +427,13 @@ def main():
         win.getMouse()
         proceed.undraw()
 
+
+
         if answer1 == 'N':
             keepPlay = False
-            goodbye = Text(Point(192.0,190.0),"Your final score was: " + str(totalScore))
+            goodbye = Text(Point(192.0,190.0),"Thank you for playing! :D")
+            goodbye.setSize(20)
+            goodbye.setStyle("bold")
             goodbye.draw(win)
 
             win.getMouse()
