@@ -121,6 +121,22 @@ def plays(win, totalScore):
             score.draw(win)
             win.getMouse()
             score.undraw()
+            getName = Text(Point(192.0,190.0),"Please enter your name for records")
+            getName.draw(win)
+            win.getMouse()
+            getName.undraw()
+            userName = Entry(Point(192.0, 190.0), 10)
+            userName.setText("")
+            userName.draw(win)
+            win.getMouse()
+            userName = userName.getText()
+    
+
+            records = open("Rankings.txt", "w")
+            records.write(userName)
+            records.write(" ")
+            records.write(str(finalScore))
+            records.close()
             win.close()
 
 
