@@ -1,4 +1,5 @@
 from graphics import *
+from MiniGameClassEd import RememberTheShape
 import random 
 
 
@@ -735,8 +736,9 @@ def main():
 
     win = GraphWin("Remember The Shape", 420, 420, autoflush=False)
     totalScore = 0
-
-    introGame(win)
+    game = RememberTheShape()
+    game.introGame(win)
+    #introGame(win)
     plays(win, totalScore) 
     
 
