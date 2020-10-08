@@ -5,9 +5,9 @@ class RememberTheShape:
 
     def __init__(self):
         self.totalScore = 0
-        self.choosenNum = random.randint(1,7)
-        self.squareNum = random.randint(1,4)
-        self.answer = 0
+        self.choosenNum = 0
+        self.squareNum = 0
+        self.answer = ""
         
     
     def getFinalScore(self,win):
@@ -66,9 +66,6 @@ class RememberTheShape:
 
     def playGame(self,win):
 
-        #keepPlay = True
-        #finalScore = 0
-        #while keepPlay:
 
             PresentingSpace = Rectangle(Point(64.0,363.0),Point(357.0,50.0))
             PresentingSpace.draw(win)
@@ -90,7 +87,7 @@ class RememberTheShape:
             num4.draw(win)
 
 
-            #numberChoosen = self.drawShapes(win)
+            
             self.drawShapes(win)
             PresentingSpace.undraw()
             firstLine.undraw()
@@ -104,22 +101,13 @@ class RememberTheShape:
 
             win.getMouse()
 
-            #squareNum = random.randint(1,4)
+            
             guess = Text(Point(192.0,190.0),"What was the shape in square: " + str(self.squareNum))
             guess.draw(win)
             win.getMouse()
             guess.undraw()
             self.getAnswer(win)
-            #userInput = Entry(Point(192.0,190.0),8)
-            #userInput.setText("")
-            #userInput.draw(win)
-            #win.getMouse()
-            #answer = userInput.getText()
-            #win.getMouse()
-            #userInput.undraw()
-
-        
-            #getTotal = shapes(answer,win)
+      
             self.guessShapes(win)
             question = Text(Point(192.0,190.0),"Do you want to keep playing?")
             question.draw(win)
@@ -128,50 +116,18 @@ class RememberTheShape:
             win.getMouse()
             question.undraw()
             question1.undraw()
-            #finalScore = finalScore + self.totalScore
+        
             
         
 
-            #enterKey = win.checkKey()
-            #if enterKey == 'Return':
-                #keepPlay = True
-                #text1 = Text(Point(192.0,190.0),"Next Round")
-                #text1.draw(win)
-                #win.getMouse()
-                #text1.undraw()
 
-            #elif win.getMouse():
-                #keepPlay = False
-                #goodbye = Text(Point(192.0,190.0),"Thank you for playing! :D")
-                #goodbye.setSize(20)
-                #goodbye.setStyle("bold")
-                #goodbye.draw(win)
-                #win.getMouse()
-                #goodbye.undraw()
-                #self.getFinalScore(win)
-                #getName = Text(Point(192.0,190.0),"Please enter your name for records")
-                #getName.draw(win)
-                #win.getMouse()
-                #getName.undraw()
-                #userName = Entry(Point(192.0, 190.0), 10)
-                #userName.setText("")
-                #userName.draw(win)
-                #win.getMouse()
-                #userName = userName.getText()
     
-
-                #records = open("Rankings.txt", "w")
-                #records.write(userName)
-                #records.write(" ")
-                #records.write(str(finalScore))
-                #records.close()
-                #win.close()
 
     
 
     def drawShapes(self, win):
         
-        
+        self.choosenNum = random.randint(1,7)
         
         if self.choosenNum == 1:
             first = Rectangle(Point(85.0, 180.0),Point(195.0, 70.0))
@@ -296,7 +252,8 @@ class RememberTheShape:
         num2 = 2
         num3 = 3
         num4 = 4
-        self.squareNum
+
+        self.squareNum = random.randint(1,4)
 
         if self.choosenNum == 1:
             first = "square"
@@ -312,57 +269,57 @@ class RememberTheShape:
                     answer.undraw()
                     self.totalScore = self.totalScore + 1
             
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
      
 
-        elif num2 == self.squareNum:
-            if second == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-               
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
+            elif num2 == self.squareNum:
+                if second == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
        
 
-        elif num3 == self.squareNum:
-            if third == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-                
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-       
+            elif num3 == self.squareNum:
+                if third == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                    
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+        
 
-        elif num4 == self.squareNum:
-            if fourth == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-                
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-       
+            elif num4 == self.squareNum:
+                if fourth == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                    
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+        
 
         if self.choosenNum == 2:
             firstA = "square"
@@ -384,50 +341,50 @@ class RememberTheShape:
                     answer.undraw()
         
 
-        elif num2 == self.squareNum:
-            if secondA == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-                
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-       
+            elif num2 == self.squareNum:
+                if secondA == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                    
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+        
 
-        elif num3 == self.squareNum:
-            if thirdA == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-               
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
+            elif num3 == self.squareNum:
+                if thirdA == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
                 
         
 
-        elif num4 == self.squareNum:
-            if fourthA == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-                
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
+            elif num4 == self.squareNum:
+                if fourthA == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                    
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
        
 
         if self.choosenNum == 3:
@@ -516,49 +473,49 @@ class RememberTheShape:
                     answer.undraw()
         
 
-        elif num2 == self.squareNum:
-            if secondC == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-              
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-            
-
-        elif num3 == self.squareNum:
-            if thirdC == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
+            elif num2 == self.squareNum:
+                if secondC == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
                 
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                
+
+            elif num3 == self.squareNum:
+                if thirdC == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                    
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
             
 
-        elif num4 == self.squareNum:
-            if fourthC == self.answer:
-                answer = Text(Point(192.0,190.0),"You are Correct!")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
-                self.totalScore = self.totalScore + 1
-              
-            else:
-                answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
-                answer.draw(win)
-                win.getMouse()
-                answer.undraw()
+            elif num4 == self.squareNum:
+                if fourthC == self.answer:
+                    answer = Text(Point(192.0,190.0),"You are Correct!")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
+                    self.totalScore = self.totalScore + 1
+                
+                else:
+                    answer = Text(Point(192.0,190.0),"You are Incorrect! :( ")
+                    answer.draw(win)
+                    win.getMouse()
+                    answer.undraw()
 
         if self.choosenNum == 5:
             firstD = "circle"
